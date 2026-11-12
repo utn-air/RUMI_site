@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RUMI is a Robotiq-matched universal manipulation interface for robot learning with augmented reality and haptic feedback.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <title>RUMI — A Robotiq-Matched Universal Manipulation Interface</title>
+  <link rel="canonical" href="https://utn-air.github.io/RUMI/">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:wght@400;500;600;700|Space+Grotesk:wght@400;500;600;700" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/svg+xml" href="./static/images/utn.svg">
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-content wrap">
+      <div class="eyebrow"><span></span> Robot learning · Haptics · Augmented reality</div>
+      <h1>RUMI</h1>
+      <h3 class="hero-subtitle">A Robotiq-Matched Universal Manipulation Interface for Robot Learning<br/>with Augmented Reality and Haptic Feedback</h3>
+      <div class="authors">Kevin Avdiu<sup>*</sup> · Seongjin Bien<sup>*</sup> · Yannik Blei<sup>*</sup> · Philine Meister · Johannes Hechtl · Philipp Schmitt · Kai Wurm · Georg von Wichert · Wolfram Burgard<sup>*</sup></div>
+      <p class="affiliations">Siemens · University of Technology Nuremberg · Technical University of Munich</p>
+      <div class="actions"><a class="button primary" href="#platform">Explore RUMI <span aria-hidden="true">↓</span></a><a class="button secondary" href="#citation">View citation <span aria-hidden="true">↗</span></a><span class="coming-soon-wrap" tabindex="0" role="note" aria-label="Code & Assets — Coming soon"><span class="button code-badge" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.08c-3.1.68-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.78 2.57 3.5 1.95.1-.72.39-1.22.7-1.5-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.62 5.24-5.11 5.51.4.35.75 1.03.75 2.08V22c0 .29.2.63.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg>Code &amp; Assets</span></span><span class="coming-soon-wrap arxiv-coming-soon" tabindex="0" role="note" aria-label="arXiv link coming soon"><span class="button code-badge arxiv-badge" aria-disabled="true">arXiv</span></span></div>
+      <figure class="figure-placeholder hero-figure" aria-label="RUMI system overview"><div class="image-stage overview-image-stage"><img class="paper-image" src="./static/images/rumi_system_overview.png" alt="RUMI overview showing the VR, teleoperation, and mixed-reality modes, hardware features, and interchangeable fingers" loading="lazy"></div><figcaption><b>System overview</b> · RUMI modes: VR, teleoperation, and mixed-reality modes; hardware features and fingertip modules.</figcaption></figure>
+    </div>
+  </header>
+  <main>
+    <section class="thesis"><div class="wrap thesis-inner"><span class="section-kicker">In one sentence</span><p>RUMI brings <strong>robot-matched motion</strong>, <strong>live kinematic guidance</strong>, and <strong>contact force feedback</strong> into one handheld interface.</p><div class="thesis-tags"><span>Robotiq 2F-85 kinematics</span><span>Modular tactile fingers</span><span>Robot-free to teleoperation</span></div></div></section>
+    <section class="section wrap" id="platform"><div class="section-head"><div><span class="section-kicker">01 / The platform</span><h2>Designed around the gripper it controls.</h2></div><p class="section-intro">RUMI recreates the Robotiq 2F-85’s nonlinear finger motion and mounting geometry in a compact handheld form. The same interface can collect demonstrations away from the robot or command it remotely.</p></div>
+      <div class="feature-grid"><article class="feature-card feature-dark"><span class="feature-index">01</span><div class="feature-symbol">↗</div><h3>Matched kinematics</h3><p>A crossed scissor linkage maps thumb and index motion onto the 2F-85’s coupled fingers. An AS5600 encoder tracks aperture.</p><div class="micro-label">Embodiment-aware input</div></article><article class="feature-card"><span class="feature-index">02</span><div class="feature-symbol sensor-symbol">◉</div><h3>Interchangeable fingertips</h3><p>Swap compatible fingers for CoinFT force/torque sensing, DIGIT optical tactile sensing, or standard fingers.</p><div class="micro-label">One mount · multiple sensors</div></article><article class="feature-card"><span class="feature-index">03</span><div class="feature-symbol">⌁</div><h3>Contact you can feel</h3><p>A servo-driven blocker engages after remote contact. Continued squeezing is measured and becomes a grasp-force command.</p><div class="micro-label">Aperture before contact · force after</div></article></div>
+      <figure class="figure-placeholder wide-placeholder" aria-label="RUMI hardware details"><div class="image-stage hardware-image-stage"><img class="paper-image" src="./static/images/rumi_hardware_details.png" alt="RUMI hardware, pinch input and force sensing, and contact mechanism" loading="lazy"></div><figcaption><b>Hardware details</b> · Device overview, scissor linkage, blocker, sensors, and the three contact domains.</figcaption></figure>
+    </section>
+    <section class="section tinted" id="workflow"><div class="wrap"><div class="section-head"><div><span class="section-kicker">02 / One interface, three modes</span><h2>From hands-on practice to remote contact.</h2></div><p class="section-intro">The physical input stays familiar as the contact setting changes. RUMI’s sensors and software adapt the feedback loop to the task.</p></div>
+      <div class="mode-list"><article class="mode-row"><div class="mode-num">A</div><div><h3>Mixed reality · Collect in the workspace</h3><p>Handle objects directly while a headset projects the target robot as a digital shadow. Fingertip sensors record local contact.</p></div><div class="mode-state"><span class="state-dot local"></span> Local contact</div></article><article class="mode-row"><div class="mode-num">B</div><div><h3>Virtual reality · Practice in simulation</h3><p>Control a simulated gripper. Contact engages the blocker, and squeeze force becomes a force-aware command.</p></div><div class="mode-state"><span class="state-dot virtual"></span> Virtual contact</div></article><article class="mode-row"><div class="mode-num">C</div><div><h3>Teleoperation · Work through distance</h3><p>Drive a real robot remotely with matched aperture control. When its gripper contacts an object, RUMI returns a mechanical cue and force input path.</p></div><div class="mode-state"><span class="state-dot remote"></span> Remote contact</div></article></div>
+    </div></section>
+    <section class="section wrap"><div class="section-head"><div><span class="section-kicker">03 / Robot-aware demonstrations</span><h2>See what the robot can actually reach.</h2></div><p class="section-intro">During robot-free collection, tracked RUMI poses drive an inverse-kinematics solution for a projected robot. Operators can spot workspace and joint-limit issues while recording.</p></div><div class="ar-process"><div class="process-step"><span>01</span><h3>Register</h3><p>QR markers and surface depth align the headset, workspace, and robot base.</p></div><div class="process-arrow">→</div><div class="process-step"><span>02</span><h3>Project</h3><p>The tracked handheld pose becomes a desired end-effector pose for the digital robot.</p></div><div class="process-arrow">→</div><div class="process-step"><span>03</span><h3>Check & record</h3><p>View the robot configuration and initialize episodes by aligning RUMI to the projected end-effector.</p></div></div><figure class="figure-placeholder teleop-figure" aria-label="First-person and third-person teleoperation rollouts"><div class="teleop-grid"><article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Teleoperation rollout from a third-person view"><source src="./static/videos/web/rumi_teleop_tpv.mp4" type="video/mp4"></video><h3>Third-person view (TPV)</h3></article><article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Teleoperation rollout from a first-person view"><source src="./static/videos/web/rumi_teleop_fpv.mp4" type="video/mp4"></video><h3>First-person view (FPV)</h3></article></div><figcaption><b>Teleoperation views</b> · Rollouts shown from third-person and first-person views.</figcaption></figure></section>
+    <section class="section tinted" id="evaluation">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="section-kicker">04 / Evaluation</span><h2>Useful data, across sensors and settings.</h2></div>
+          <p class="section-intro">The paper evaluates recording-time robot guidance, imitation learning with two fingertip modalities, and force-aware data collection in simulation.</p>
+        </div>
+        <div class="results-grid">
+          <article class="result-card"><div class="result-top"><span class="result-label">AR user study</span><span class="result-icon">↗</span></div><div class="big-stat">3<span>/50</span></div><h3>Episodes with joint-limit violations</h3><p>With AR projection and pose initialization, compared with <strong>16/50</strong> without AR. Velocity violations were 11/50 vs. 29/50.</p><div class="comparison"><span>AR <b>3 / 50</b></span><span>Without AR <b>16 / 50</b></span></div></article>
+          <article class="result-card"><div class="result-top"><span class="result-label">Real-robot imitation</span><span class="result-icon">◎</span></div><div class="big-stat">4<span> tasks</span></div><h3>Two fingertip sensing modalities</h3><p>CoinFT supports board wiping and gear insertion; DIGIT supports screw tightening and box sorting.</p><div class="task-pills"><span>Board wiping</span><span>Gear insertion</span><span>Screw tightening</span><span>Box sorting</span></div></article>
+          <article class="result-card result-highlight"><div class="result-top"><span class="result-label">Simulated teleoperation</span><span class="result-icon">⌁</span></div><div class="big-stat">5.66<span> N</span></div><h3>Gentle grasp for a fragile bulb</h3><p>With haptic feedback, average demonstrated force was 5.66 N for the bulb and 22.82 N for the heavier block.</p><div class="comparison"><span>Bulb success <b>94%</b></span><span>Block success <b>97%</b></span></div></article>
+        </div>
+        <figure class="figure-placeholder data-comparison" aria-label="AR comparison results">
+          <div class="results-evidence-row">
+            <div class="comparison-panel"><img class="paper-image" src="./static/images/user_study_initial_pose.png" alt="Initial pose distributions comparing AR and no AR" loading="lazy"><span>(a) Initial pose distribution</span></div>
+            <div class="comparison-right-column">
+              <div class="comparison-panel"><img class="paper-image" src="./static/images/user_study_xyzrpy_velocity.png" alt="Average Cartesian velocity comparison for AR and no AR" loading="lazy"><span>(b) Average Cartesian velocity</span></div>
+              <div class="table-wrap"><table><caption>Selected results reported in the paper</caption><thead><tr><th>Measure</th><th>With AR</th><th>Without AR</th></tr></thead><tbody><tr><td>Joint-limit violations</td><td>3 / 50 episodes</td><td>16 / 50 episodes</td></tr><tr><td>Joint-velocity violations</td><td>11 / 50 episodes</td><td>29 / 50 episodes</td></tr><tr><td>Average manipulability</td><td>0.055 ± 0.022</td><td>0.046 ± 0.0057</td></tr></tbody></table></div>
+            </div>
+          </div>
+          <figcaption><b>AR data-quality comparison</b> · Initial poses at left; average Cartesian velocity and selected data-quality results at right, comparing AR with no AR.</figcaption>
+          <p class="comparison-subtitle">RUMI’s AR guidance improves collected data quality: episodes with joint-limit violations fell from 16/50 without AR to 3/50 with AR.</p>
+        </figure>
+        <figure class="figure-placeholder rollout-figure" aria-label="Rollout videos for the four real-world manipulation tasks">
+          <div class="rollout-grid">
+            <article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Robot rollout: whiteboard wiping"><source src="./static/videos/web/rumi_board.mp4" type="video/mp4"></video><h3>Whiteboard wiping</h3></article>
+            <article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Robot rollout: gear insertion"><source src="./static/videos/web/rumi_gear.mp4" type="video/mp4"></video><h3>Gear insertion</h3></article>
+            <article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Robot rollout: screw tightening"><source src="./static/videos/web/rumi_screw.mp4" type="video/mp4"></video><h3>Screw tightening</h3></article>
+            <article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Robot rollout: box sorting"><source src="./static/videos/web/rumi_box.mp4" type="video/mp4"></video><h3>Box sorting</h3></article>
+          </div>
+          <figcaption><b>Real-world task rollouts</b> · Whiteboard wiping and gear insertion with CoinFT; screw tightening and box sorting with DIGIT.</figcaption>
+        </figure>
+        <figure class="figure-placeholder haptic-figure" aria-label="Haptic teleoperation rollout videos">
+          <div class="teleop-grid haptic-grid">
+            <article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Haptic teleoperation rollout 1"><source src="./static/videos/web/rumi_haptic_1.mp4" type="video/mp4"></video></article>
+            <article class="rollout-card"><video autoplay muted loop playsinline preload="metadata" aria-label="Haptic teleoperation rollout 2"><source src="./static/videos/web/rumi_haptic_2.mp4" type="video/mp4"></video></article>
+          </div>
+          <figcaption>Haptic teleoperation rollouts with force-aware gripper control.</figcaption>
+        </figure>
+
+      </div>
+    </section>
+    <section class="section wrap closing"><span class="section-kicker">05 / Takeaway</span><h2>A consistent physical interface<br>for <em>demonstration and control.</em></h2><p>RUMI combines embodiment-matched motion, modular sensing, robot-aware visualization, and contact-triggered haptics to support tactile-enabled learning from demonstration.</p></section>
+    <section class="section citation-section" id="citation"><div class="wrap citation-layout"><div><span class="section-kicker">Paper</span><h2>Cite RUMI</h2><p>Use this provisional arXiv-style citation. The arXiv link is coming soon.</p></div><pre><code>@misc{avdiu2026rumi,
+  title={RUMI: A Robotiq-Matched Universal Manipulation Interface for Robot Learning with Augmented Reality and Haptic Feedback},
+  author={Avdiu, Kevin and Bien, Seongjin and Blei, Yannik and Meister, Philine and Hechtl, Johannes and Schmitt, Philipp and Wurm, Kai and von Wichert, Georg and Burgard, Wolfram},
+  year={2026},
+  note={preprint}
+}</code></pre></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark">R</span><span>RUMI <small>Research project</small></span></a><p>Robotiq-matched manipulation interface for robot learning.</p><a href="#top" class="back-top">Back to top ↑</a></div><div class="wrap footnote"><span>* Co-authors, sorted by last name, as marked in the paper.</span><span>University of Technology Nuremberg · Siemens · Technical University of Munich</span></div></footer>
+  <script src="./static/js/rumi.js"></script>
+</body>
+</html>

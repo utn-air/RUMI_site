@@ -1,0 +1,7 @@
+// Keep navigation and paper figure references usable without external scripts.
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.setAttribute('tabindex', '-1');
+  });
+});
